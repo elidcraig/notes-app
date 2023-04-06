@@ -1,6 +1,6 @@
-import { Table, Bucket } from "sst/constructs";
+import { Table, Bucket, StackContext } from "sst/constructs";
 
-export function StorageStack({ stack, app }) {
+export function StorageStack({ stack, app }: StackContext) {
   const bucket = new Bucket(stack, "Uploads");
   const table = new Table(stack, "Notes", {
     fields: {
